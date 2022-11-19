@@ -33,7 +33,7 @@ public class DashBoardScreen extends BaseScreen {
     private AndroidElement dismissWelcome;
 
     @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
-    @AndroidFindBy(uiAutomator = "//android.widget.ImageView[contains(@content-desc,\"Map\")]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/tab_icon\")")
     private AndroidElement mapButton;
 
     /**
