@@ -23,10 +23,19 @@ public class MoreOptionsScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Privacy & Legal button\")")
     private AndroidElement privacyLegalButton;
 
+
+    /**
+     * @author Juan.Gonzalez
+     * Scroll down until the Privacy & Legal button is located.
+     */
     public void scrollDownToPrivacyLegal(){
         scrollDown(4);
     }
 
+    /**
+     * @author Juan.Gonzalez
+     * return true if 'Privacy & Legal' Button is displayed on screen, otherwise false.
+     */
     public boolean privacyLegalButtonIsDisplayed() {
         return isElementAvailable(privacyLegalButton);
     }
