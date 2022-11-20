@@ -40,6 +40,10 @@ public class MapScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Show List\")")
     private AndroidElement showListButton;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Hotels, Category, 10of11, button\")")
+    private AndroidElement hotelsCategoryButton;
+
+
     /**
      * @author Hans.Marquez
      * return true if Category List element is displayed in screen, otherwise false.
@@ -64,4 +68,21 @@ public class MapScreen extends BaseScreen {
         return isElementAvailable(showListButton);
     }
 
+    /**
+     * @author Juan.Gonzalez
+     * Click on the Category List button if it is available.
+     */
+    public void clickOnCategoryList() {
+        if (this.isElementAvailable(categoryList, 25)) {
+            click(categoryList);
+        }
+    }
+
+    /**
+     * @author Juan.Gonzalez
+     * return true if Show Hotels Category Button element is displayed in screen, otherwise false.
+     */
+    public boolean HotelsCategoryButtonIsDisplayed() {
+        return isElementAvailable(hotelsCategoryButton);
+    }
 }
