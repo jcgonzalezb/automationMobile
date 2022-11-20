@@ -14,7 +14,7 @@ public class CategoryListTest extends BaseMobileTest {
      */
     @Description(value = "Category List test")
     @Test()
-    public void checkHotelOnCategoryList(){
+    public void checkHotelOptionOnCategoryList(){
         log.info("Start Navigation to Map Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
         MapScreen map = dashBoard.goToMapScreen();

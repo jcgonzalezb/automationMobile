@@ -3,7 +3,6 @@ package screens;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.HowToUseLocators;
 import util.screens.BaseScreen;
 
 import static io.appium.java_client.pagefactory.LocatorGroupStrategy.ALL_POSSIBLE;
@@ -34,9 +33,12 @@ public class DashBoardScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Map, Tab, 2of5\")")
     private AndroidElement mapButton;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Map, Tab, 5of5\")")
+    private AndroidElement moreOptionsButton;
+
     /**
      * @author Hans.Marquez
-     * Navigate to Login Screen from DashBoard Screen.
+     * Navigate to Map Screen from DashBoard Screen.
      */
     public MapScreen goToMapScreen() {
         if (this.isElementAvailable(dismissWelcome, 25)){
@@ -47,5 +49,20 @@ public class DashBoardScreen extends BaseScreen {
         }
         click(mapButton);
         return new MapScreen(driver);
+    }
+
+    /**
+     * @author Juan.Gonzalez
+     * Navigate to Privacy & Legal Screen from DashBoard Screen.
+     */
+    public MoreOptionsScreen goToMoreOptionsScreen() {
+        if (this.isElementAvailable(dismissWelcome, 25)){
+            click(dismissWelcome);
+        }
+        if (this.isElementAvailable(dismissPreferenceUpdateButton, 25)){
+            click(dismissPreferenceUpdateButton);
+        }
+        click(moreOptionsButton);
+        return new MoreOptionsScreen(driver);
     }
 }
