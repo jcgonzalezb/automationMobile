@@ -87,20 +87,7 @@ public abstract class BaseScreen {
         }
     }
 
-    /**
-     * Scroll to the text attribute received by parameter.
-     *
-     * @param text : String
-     * @author Arley.Bolivar
-     */
-    public void scrollToText(String text) {
-        String automator = "new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().textContains(\"%s\"))";
-        AndroidElement textOnElement = driver.findElementByAndroidUIAutomator(format(automator, text));
-        log.info(textOnElement.getText());
-    }
-
-
-    /**
+     /**
      * Swipe vertical.
      *
      * @param percentage of swipe
