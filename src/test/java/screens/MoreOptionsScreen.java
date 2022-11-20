@@ -40,4 +40,13 @@ public class MoreOptionsScreen extends BaseScreen {
         return isElementAvailable(privacyLegalButton);
     }
 
+    /**
+     * @author Juan.Gonzalez
+     * Navigate to Privacy & Legal Screen from More Options Screen.
+     */
+    public PrivacyLegalScreen goToPrivacyLegalScreen() {
+        click(privacyLegalButton);
+        return new PrivacyLegalScreen(driver);
+    }
+
 }

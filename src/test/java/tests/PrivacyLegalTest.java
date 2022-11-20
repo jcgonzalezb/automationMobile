@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import screens.DashBoardScreen;
 import screens.MoreOptionsScreen;
+import screens.PrivacyLegalScreen;
 import util.tests.BaseMobileTest;
 
 public class PrivacyLegalTest extends BaseMobileTest {
@@ -21,6 +22,9 @@ public class PrivacyLegalTest extends BaseMobileTest {
         moreOtherOptions.scrollDownToPrivacyLegal();
         log.info("Validate Privacy & Legal button");
         Assert.assertTrue(moreOtherOptions.privacyLegalButtonIsDisplayed(), "Privacy & Legal button not displayed");
+        PrivacyLegalScreen privacyLegalScreen = moreOtherOptions.goToPrivacyLegalScreen();
+        log.info("Validate Privacy & Legal option list");
+        Assert.assertTrue(privacyLegalScreen.listOfLegalOptionsIsDisplayed(), "Privacy & Legal option list not displayed");
 
 
     }
