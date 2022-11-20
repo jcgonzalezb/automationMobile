@@ -3,7 +3,7 @@ package tests;
 import org.springframework.context.annotation.Description;
 import org.testng.annotations.Test;
 import screens.DashBoardScreen;
-import screens.MapScreen;
+import screens.MoreOptionsScreen;
 import util.tests.BaseMobileTest;
 
 public class PrivacyLegalTest extends BaseMobileTest {
@@ -16,10 +16,7 @@ public class PrivacyLegalTest extends BaseMobileTest {
     public void navigateToPrivacyLegalScreen() {
         log.info("Start Navigation to Dashboard Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
-
-
-
-
+        MoreOptionsScreen moreOtherOptions = dashBoard.goToMoreOptionsScreen();
     }
 
 

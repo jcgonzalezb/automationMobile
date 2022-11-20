@@ -33,7 +33,7 @@ public class DashBoardScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Map, Tab, 2of5\")")
     private AndroidElement mapButton;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Map, Tab, 5of5\")")
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"More Options, Tab, 5of5\")")
     private AndroidElement moreOptionsButton;
 
     /**
@@ -53,7 +53,7 @@ public class DashBoardScreen extends BaseScreen {
 
     /**
      * @author Juan.Gonzalez
-     * Navigate to Privacy & Legal Screen from DashBoard Screen.
+     * Navigate to More Options Screen from DashBoard Screen.
      */
     public MoreOptionsScreen goToMoreOptionsScreen() {
         if (this.isElementAvailable(dismissWelcome, 25)){
