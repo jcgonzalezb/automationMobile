@@ -80,7 +80,7 @@ public abstract class BaseScreen {
      * @author Hans.Marquez
      */
     public void click(AndroidElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, 40);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(element));
         element.click();
     }
@@ -106,7 +106,7 @@ public abstract class BaseScreen {
      * @author Hans.Marquez
      */
     public boolean isElementAvailable(AndroidElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver, 45);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return true;
