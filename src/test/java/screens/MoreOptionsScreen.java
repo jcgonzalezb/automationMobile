@@ -20,12 +20,15 @@ public class MoreOptionsScreen extends BaseScreen {
         super(driver);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Tickets and Passes, 1 of 21, button\")")
-    private AndroidElement ticketsButton;
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Privacy & Legal button\")")
+    private AndroidElement privacyLegalButton;
 
-    public boolean ticketsButtonIsDisplayed() {
-        return isElementAvailable(ticketsButton);
+    public void scrollDownToPrivacyLegal(){
+        scrollDown(4);
     }
 
+    public boolean privacyLegalButtonIsDisplayed() {
+        return isElementAvailable(privacyLegalButton);
+    }
 
 }

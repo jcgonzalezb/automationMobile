@@ -18,9 +18,10 @@ public class PrivacyLegalTest extends BaseMobileTest {
         log.info("Start Navigation to Dashboard Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
         MoreOptionsScreen moreOtherOptions = dashBoard.goToMoreOptionsScreen();
+        moreOtherOptions.scrollDownToPrivacyLegal();
+        log.info("Validate Privacy & Legal button");
+        Assert.assertTrue(moreOtherOptions.privacyLegalButtonIsDisplayed(), "Privacy & Legal button not displayed");
 
-        log.info("Validate Tickets and Passes Button");
-        Assert.assertTrue(moreOtherOptions.ticketsButtonIsDisplayed(), "Ticket button not displayed");
 
     }
 
