@@ -1,6 +1,7 @@
 package tests;
 
 import org.springframework.context.annotation.Description;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import screens.DashBoardScreen;
 import screens.MoreOptionsScreen;
@@ -17,6 +18,10 @@ public class PrivacyLegalTest extends BaseMobileTest {
         log.info("Start Navigation to Dashboard Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
         MoreOptionsScreen moreOtherOptions = dashBoard.goToMoreOptionsScreen();
+
+        log.info("Validate Tickets and Passes Button");
+        Assert.assertTrue(moreOtherOptions.ticketsButtonIsDisplayed(), "Ticket button not displayed");
+
     }
 
 
