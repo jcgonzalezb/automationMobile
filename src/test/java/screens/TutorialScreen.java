@@ -27,12 +27,10 @@ public class TutorialScreen extends BaseScreen {
         super(driver);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/permission_title\")")
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Get Started\")")
     private AndroidElement getStartedButton;
 
-    @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/permission_primary_btn\")")
-    @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Share Location\")")
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Share Location\")")
     private AndroidElement shareLocationButton;
 
     @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
