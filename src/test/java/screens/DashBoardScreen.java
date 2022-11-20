@@ -28,10 +28,9 @@ public class DashBoardScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/button2\")")
     private AndroidElement dismissPreferenceUpdateButton;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/dismiss-icon\")")
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Close Takeover\")")
     private AndroidElement dismissWelcome;
 
-    @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Map, Tab, 2of5\")")
     private AndroidElement mapButton;
 
