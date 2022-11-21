@@ -11,7 +11,7 @@ import util.tests.BaseMobileTest;
 public class PrivacyLegalTest extends BaseMobileTest {
 
     /**
-     * Validate Privacy & Legal Screen Navigation.
+     * Validate display on screen of complete list of Privacy & Legal options.
      */
     @Description(value = "Privacy & Legal Navigation test")
     @Test()
@@ -37,21 +37,13 @@ public class PrivacyLegalTest extends BaseMobileTest {
         Assert.assertTrue(privacyLegalScreen.propertyRulesOptionIsDisplayed(), "Property Rules option not displayed");
         log.info("Validate Electronic Communications Disclosure option");
         Assert.assertTrue(privacyLegalScreen.electronicCommunicationsDisclosureOptionIsDisplayed(), "Electronic Communications Disclosure option not displayed");
-
-
-
-
-
-
-
-
-
-
-
+        log.info("Validate Your California Privacy Rights option");
+        Assert.assertTrue(privacyLegalScreen.yourCaliforniaPrivacyRightsOptionIsDisplayed(), "Your California Privacy Rights option not displayed");
+        log.info("Validate Do Not Sell My Personal Information option");
+        Assert.assertTrue(privacyLegalScreen.doNotSellMyPersonalInformationOptionIsDisplayed(), "Do Not Sell My Personal Information option not displayed");
+        log.info("Validate In-App Maps Subject to Google Terms and Conditions option");
+        Assert.assertTrue(privacyLegalScreen.googleTermsAndConditionsIsDisplayed(), "In-App Maps Subject to Google Terms and Conditions option not displayed");
+        log.info("Validate In-App Maps Subject to Google Privacy Policy option");
+        Assert.assertTrue(privacyLegalScreen.googlePrivacyPolicyIsDisplayed(), "In-App Maps Subject to Google Privacy Policy option not displayed");
     }
-
-
-
-
-
 }

@@ -60,7 +60,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * @author Juan.Gonzalez
-     * return true if the Privacy Policy option is displayed on screen, otherwise false.
+     * return true if the 'Privacy Policy' option is displayed on screen, otherwise false.
      */
     public boolean privacyPolicyOptionIsDisplayed() {
         return isElementAvailable(privacyPolicyButton);
@@ -68,7 +68,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * @author Juan.Gonzalez
-     * return true if the Terms of Use option is displayed on screen, otherwise false.
+     * return true if the 'Terms of Use' option is displayed on screen, otherwise false.
      */
     public boolean termsOfUseOptionIsDisplayed() {
         return isElementAvailable(termsOfUseButton);
@@ -76,7 +76,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * @author Juan.Gonzalez
-     * return true if the Supplemental Terms and Conditions option is displayed on screen, otherwise false.
+     * return true if the 'Supplemental Terms and Conditions' option is displayed on screen, otherwise false.
      */
     public boolean supplementalTermsAndConditionsOptionIsDisplayed() {
         return isElementAvailable(supplementalTermsAndConditionsButton);
@@ -84,30 +84,42 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * @author Juan.Gonzalez
-     * return true if the Legal Notices option is displayed on screen, otherwise false.
+     * return true if the 'Legal Notices' option is displayed on screen, otherwise false.
      */
     public boolean legalNoticesOptionIsDisplayed() { return isElementAvailable(legalNoticesButton); }
 
     /**
      * @author Juan.Gonzalez
-     * return true if the Property Rules option is displayed on screen, otherwise false.
+     * return true if the 'Property Rules' option is displayed on screen, otherwise false.
      */
     public boolean propertyRulesOptionIsDisplayed() { return isElementAvailable(propertyRulesButton); }
     /**
      * @author Juan.Gonzalez
-     * return true if the Electronic Communications Disclosure option is displayed on screen, otherwise false.
+     * return true if the 'Electronic Communications Disclosure' option is displayed on screen, otherwise false.
      */
     public boolean electronicCommunicationsDisclosureOptionIsDisplayed() { return isElementAvailable(electronicCommunicationsDisclosureButton); }
 
+    /**
+     * @author Juan.Gonzalez
+     * return true if the 'Your California Privacy Rights' option is displayed on screen, otherwise false.
+     */
+    public boolean yourCaliforniaPrivacyRightsOptionIsDisplayed() { return isElementAvailable(yourCaliforniaPrivacyRightsButton); }
 
+    /**
+     * @author Juan.Gonzalez
+     * return true if the 'Do Not Sell My Personal Information' option is displayed on screen, otherwise false.
+     */
+    public boolean doNotSellMyPersonalInformationOptionIsDisplayed() { return isElementAvailable(doNotSellMyPersonalInformationButton); }
 
+    /**
+     * @author Juan.Gonzalez
+     * return true if the 'In-App Maps Subject to Google Terms and Conditions' option is displayed on screen, otherwise false.
+     */
+    public boolean googleTermsAndConditionsIsDisplayed() { return isElementAvailable(googleTermsAndConditionsButton); }
 
-
-
-
-
-
-
-
-
+    /**
+     * @author Juan.Gonzalez
+     * return true if the 'In-App Maps Subject to Google Privacy Policy' option is displayed on screen, otherwise false.
+     */
+    public boolean googlePrivacyPolicyIsDisplayed() { return isElementAvailable(googlePrivacyPolicyButton); }
 }
