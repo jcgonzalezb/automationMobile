@@ -56,6 +56,14 @@ public class DashBoardScreen extends BaseScreen {
 
     /**
      * @author Juan.Gonzalez
+     * return true if Show More Options Button element is displayed on screen, otherwise false.
+     */
+    public boolean moreOptionsButtonIsDisplayed() {
+        return isElementAvailable(moreOptionsButton);
+    }
+
+    /**
+     * @author Juan.Gonzalez
      * Navigate to More Options Screen from DashBoard Screen.
      */
     public MoreOptionsScreen goToMoreOptionsScreen() {

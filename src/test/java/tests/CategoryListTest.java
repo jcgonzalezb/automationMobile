@@ -26,6 +26,6 @@ public class CategoryListTest extends BaseMobileTest {
         log.info("Validate Category list");
         Assert.assertTrue(map.showSelectCategoryDisplayed(), "Category list not displayed");
         log.info("Validate Hotels option");
-        Assert.assertTrue(map.HotelsCategoryButtonIsDisplayed(), "Hotels Category is not available");
+        Assert.assertTrue(map.hotelsCategoryButtonIsDisplayed(), "Hotels Category is not available");
     }
 }
