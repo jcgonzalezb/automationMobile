@@ -17,8 +17,10 @@ public class AddPlansOptionTest extends BaseMobileTest {
     public void checkDiningAvailability(){
         log.info("Start Navigation to Dashboard Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
+
         log.info("Start Navigation to Buy Tickets Reserve Dining Screen");
         BuyTicketsReserveDiningScreen buyTicketsReserveDiningScreen = dashBoard.goToBuyTicketsReserveDiningScreen();
+
         log.info("Validate Check Dining Availability button");
         Assert.assertTrue(buyTicketsReserveDiningScreen.checkDiningAvailabilityIsDisplayed(), "Check Dining Availability button not displayed");
     }
