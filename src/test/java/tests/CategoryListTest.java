@@ -10,11 +10,11 @@ import util.tests.BaseMobileTest;
 public class CategoryListTest extends BaseMobileTest {
 
     /**
-     * Validate Hotel option is available on the Category List
+     * Validate Hotels option is available on the Category List
      */
     @Description(value = "Category List test")
     @Test()
-    public void checkHotelOptionOnCategoryList(){
+    public void checkHotelsOptionOnCategoryList(){
         log.info("Start Navigation to Map Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
         MapScreen map = dashBoard.goToMapScreen();
