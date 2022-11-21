@@ -28,5 +28,4 @@ public class NavigationTest extends BaseMobileTest {
         log.info("Validate Filter Button");
         Assert.assertTrue(map.filterIsDisplayed(), "Filter not displayed");
     }
-
 }

@@ -36,6 +36,9 @@ public class DashBoardScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"More Options, Tab, 5of5\")")
     private AndroidElement moreOptionsButton;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Buy tickets, Reserve Dining, Tab, 3of5\")")
+    private AndroidElement buyTicketsReserveDiningButton;
+
     /**
      * @author Hans.Marquez
      * Navigate to Map Screen from DashBoard Screen.
@@ -65,4 +68,20 @@ public class DashBoardScreen extends BaseScreen {
         click(moreOptionsButton);
         return new MoreOptionsScreen(driver);
     }
+
+    /**
+     * @author Juan.Gonzalez
+     * Navigate to Buy Tickets Reserve Dining Screen from DashBoard Screen.
+     */
+    public BuyTicketsReserveDiningScreen goToBuyTicketsReserveDiningScreen() {
+        if (this.isElementAvailable(dismissWelcome, 25)){
+            click(dismissWelcome);
+        }
+        if (this.isElementAvailable(dismissPreferenceUpdateButton, 25)){
+            click(dismissPreferenceUpdateButton);
+        }
+        click(buyTicketsReserveDiningButton);
+        return new BuyTicketsReserveDiningScreen(driver);
+    }
+
 }
