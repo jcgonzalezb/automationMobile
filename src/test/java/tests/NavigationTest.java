@@ -23,7 +23,7 @@ public class NavigationTest extends BaseMobileTest {
         Assert.assertTrue(map.showListIsDisplayed(), "Show List not displayed");
 
         log.info("Validate Category Button");
-        Assert.assertTrue(map.categoryIsDisplayed(), "Category not displayed");
+        Assert.assertTrue(map.categoryButtonIsDisplayed(), "Category not displayed");
 
         log.info("Validate Filter Button");
         Assert.assertTrue(map.filterIsDisplayed(), "Filter not displayed");

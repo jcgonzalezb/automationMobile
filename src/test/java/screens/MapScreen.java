@@ -28,7 +28,10 @@ public class MapScreen extends BaseScreen {
     }
 
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*categoryTitle\")")
-    private AndroidElement categoryList;
+    private AndroidElement categoryListButton;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/categorySelectHeader\")")
+    private AndroidElement categorySelectHeader;
 
     @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*filterTitle.*\")")
@@ -50,8 +53,8 @@ public class MapScreen extends BaseScreen {
      * @author Hans.Marquez
      * return true if Category List element is displayed in screen, otherwise false.
      */
-    public boolean categoryIsDisplayed() {
-        return isElementAvailable(categoryList);
+    public boolean categoryButtonIsDisplayed() {
+        return isElementAvailable(categoryListButton);
     }
 
     /**
@@ -75,9 +78,25 @@ public class MapScreen extends BaseScreen {
      * Click on the Category List button if it is available.
      */
     public void clickOnCategoryList() {
-        if (this.isElementAvailable(categoryList, 25)) {
-            click(categoryList);
+        if (this.isElementAvailable(categoryListButton, 25)) {
+            click(categoryListButton);
         }
+    }
+
+    /**
+     * @author Juan.Gonzalez
+     * return true if Disneyland map is displayed on screen, otherwise false.
+     */
+    public boolean disneylandMapIsDisplayed() {
+        return isElementAvailable(disneylandMapOnScreen);
+    }
+
+    /**
+     * @author Hans.Marquez
+     * return true if Show Select Category title is displayed in screen, otherwise false.
+     */
+    public boolean showSelectCategoryDisplayed() {
+        return isElementAvailable(categorySelectHeader);
     }
 
     /**
@@ -88,13 +107,7 @@ public class MapScreen extends BaseScreen {
         return isElementAvailable(hotelsCategoryButton);
     }
 
-    /**
-     * @author Juan.Gonzalez
-     * return true if Disneyland map is displayed on screen, otherwise false.
-     */
-    public boolean disneylandMapIsDisplayed() {
-        return isElementAvailable(disneylandMapOnScreen);
-    }
+
 
 
 
