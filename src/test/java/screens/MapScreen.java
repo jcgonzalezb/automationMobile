@@ -43,6 +43,8 @@ public class MapScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Hotels, Category, 10of11, button\")")
     private AndroidElement hotelsCategoryButton;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/map_view_fragment\")")
+    private AndroidElement disneylandMapOnScreen;
 
     /**
      * @author Hans.Marquez
@@ -85,4 +87,16 @@ public class MapScreen extends BaseScreen {
     public boolean HotelsCategoryButtonIsDisplayed() {
         return isElementAvailable(hotelsCategoryButton);
     }
+
+    /**
+     * @author Juan.Gonzalez
+     * return true if Disneyland map is displayed on screen, otherwise false.
+     */
+    public boolean disneylandMapIsDisplayed() {
+        return isElementAvailable(disneylandMapOnScreen);
+    }
+
+
+
+
 }

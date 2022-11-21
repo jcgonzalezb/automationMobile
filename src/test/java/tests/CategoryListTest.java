@@ -18,10 +18,12 @@ public class CategoryListTest extends BaseMobileTest {
         log.info("Start Navigation to Map Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
         MapScreen map = dashBoard.goToMapScreen();
-        log.info("Validate Category Button");
+        log.info("Validate Disneyland map on screen");
+        Assert.assertTrue(map.disneylandMapIsDisplayed(), "Disneyland map not displayed");
+        log.info("Validate Category list");
         Assert.assertTrue(map.categoryIsDisplayed(), "Category not displayed");
         map.clickOnCategoryList();
-        log.info("Validate Hotels Option");
+        log.info("Validate Hotels option");
         Assert.assertTrue(map.HotelsCategoryButtonIsDisplayed(), "Hotels Category is not available");
     }
 }
