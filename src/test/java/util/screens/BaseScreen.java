@@ -15,7 +15,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static java.lang.String.format;
 
 /**
  * Base class for all screens Objects.
@@ -58,18 +57,6 @@ public abstract class BaseScreen {
     }
 
     /**
-     * Scroll Up (From Bottom to Top).
-     *
-     * @param swipes the swipes
-     * @author Hans.Marquez
-     */
-    public void scrollUp(int swipes) {
-        String locator = "new UiScrollable(new UiSelector().resourceIdMatches(\".*ontainer.*\")).flingToBeginning(1)";
-        scroll(locator, swipes);
-    }
-
-
-    /**
      * Scroll.
      *
      * @param locator the locator
@@ -100,20 +87,6 @@ public abstract class BaseScreen {
                 8,-360)).release().perform();
     }
 
-
-    /**
-     * Wrapper for click  event specifying custom wait.
-     *
-     * @param element : AndroidElement
-     * @author Hans.Marquez
-     */
-    public void click(AndroidElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.visibilityOf(element));
-        element.click();
-    }
-
-
     /**
      * Wrapper for click event.
      *
@@ -124,20 +97,6 @@ public abstract class BaseScreen {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(element));
         element.click();
-    }
-
-
-    /**
-     * Wrapper for sendKeys event.
-     *
-     * @param element   : AndroidElement
-     * @param sequence: String
-     * @author Hans.Marquez
-     */
-    public void sendKeys(AndroidElement element, String sequence) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.visibilityOf(element));
-        element.sendKeys(sequence);
     }
 
     /**
