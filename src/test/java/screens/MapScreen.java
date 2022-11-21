@@ -95,7 +95,7 @@ public class MapScreen extends BaseScreen {
      * @author Hans.Marquez
      * return true if Show Select Category title is displayed in screen, otherwise false.
      */
-    public boolean showSelectCategoryDisplayed() {
+    public boolean selectCategoryTitleIsDisplayed() {
         return isElementAvailable(categorySelectHeader);
     }
 
