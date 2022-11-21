@@ -26,26 +26,26 @@ public class PrivacyLegalTest extends BaseMobileTest {
         MoreOptionsScreen moreOtherOptions = dashBoard.goToMoreOptionsScreen();
         moreOtherOptions.scrollDownToPrivacyLegal();
 
-        log.info("Validate 'My Profile' button");
-        Assert.assertTrue(moreOtherOptions.myProfileButtonIsDisplayed(), "'My Profile' button not displayed");
+        log.info("Validate 'My Profile' option");
+        Assert.assertTrue(moreOtherOptions.myProfileButtonIsDisplayed(), "'My Profile' option not displayed");
 
-        log.info("Validate 'Property Rules' button");
-        Assert.assertTrue(moreOtherOptions.propertyRulesButtonIsDisplayed(), "'Property Rules' button not displayed");
+        log.info("Validate 'Property Rules' option");
+        Assert.assertTrue(moreOtherOptions.propertyRulesButtonIsDisplayed(), "'Property Rules' option not displayed");
 
-        log.info("Validate 'Cast Compliment' button");
-        Assert.assertTrue(moreOtherOptions.castComplimentButtonIsDisplayed(), "'Cast Compliment' button not displayed");
+        log.info("Validate 'Cast Compliment' option");
+        Assert.assertTrue(moreOtherOptions.castComplimentButtonIsDisplayed(), "'Cast Compliment' option not displayed");
 
-        log.info("Validate 'Link to Account' button");
-        Assert.assertTrue(moreOtherOptions.linkToAccountButtonIsDisplayed(), "'Link to Account' button not displayed");
+        log.info("Validate 'Link to Account' option");
+        Assert.assertTrue(moreOtherOptions.linkToAccountButtonIsDisplayed(), "'Link to Account' option not displayed");
 
-        log.info("Validate 'Car Locator' button");
-        Assert.assertTrue(moreOtherOptions.carLocatorButtonIsDisplayed(), "'Car Locator' button not displayed");
+        log.info("Validate 'Car Locator' option");
+        Assert.assertTrue(moreOtherOptions.carLocatorButtonIsDisplayed(), "'Car Locator' option not displayed");
 
-        log.info("Validate 'Help' button");
-        Assert.assertTrue(moreOtherOptions.helpButtonIsDisplayed(), "'Help' button not displayed");
+        log.info("Validate 'Help' option");
+        Assert.assertTrue(moreOtherOptions.helpButtonIsDisplayed(), "'Help' option not displayed");
 
-        log.info("Validate 'Privacy & Legal' button");
-        Assert.assertTrue(moreOtherOptions.privacyLegalButtonIsDisplayed(), "'Privacy & Legal' button not displayed");
+        log.info("Validate 'Privacy & Legal' option");
+        Assert.assertTrue(moreOtherOptions.privacyLegalButtonIsDisplayed(), "'Privacy & Legal' option not displayed");
 
         log.info("Start Navigation to Privacy & Legal Screen");
         PrivacyLegalScreen privacyLegalScreen = moreOtherOptions.goToPrivacyLegalScreen();
