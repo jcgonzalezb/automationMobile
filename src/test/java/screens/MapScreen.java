@@ -103,7 +103,7 @@ public class MapScreen extends BaseScreen {
      * @author Juan.Gonzalez
      * return true if Show Hotels Category Button element is displayed in screen, otherwise false.
      */
-    public boolean HotelsCategoryButtonIsDisplayed() {
+    public boolean hotelsCategoryButtonIsDisplayed() {
         return isElementAvailable(hotelsCategoryButton);
     }
 
