@@ -24,45 +24,63 @@ public class PrivacyLegalTest extends BaseMobileTest {
 
         log.info("Start Navigation to More Options Screen");
         MoreOptionsScreen moreOtherOptions = dashBoard.goToMoreOptionsScreen();
-
-        log.info("Validate Privacy & Legal button");
         moreOtherOptions.scrollDownToPrivacyLegal();
-        Assert.assertTrue(moreOtherOptions.privacyLegalButtonIsDisplayed(), "Privacy & Legal button not displayed");
+
+        log.info("Validate 'My Profile' button");
+        Assert.assertTrue(moreOtherOptions.myProfileButtonIsDisplayed(), "'My Profile' button not displayed");
+
+        log.info("Validate 'Property Rules' button");
+        Assert.assertTrue(moreOtherOptions.propertyRulesButtonIsDisplayed(), "'Property Rules' button not displayed");
+
+        log.info("Validate 'Cast Compliment' button");
+        Assert.assertTrue(moreOtherOptions.castComplimentButtonIsDisplayed(), "'Cast Compliment' button not displayed");
+
+        log.info("Validate 'Link to Account' button");
+        Assert.assertTrue(moreOtherOptions.linkToAccountButtonIsDisplayed(), "'Link to Account' button not displayed");
+
+        log.info("Validate 'Car Locator' button");
+        Assert.assertTrue(moreOtherOptions.carLocatorButtonIsDisplayed(), "'Car Locator' button not displayed");
+
+        log.info("Validate 'Help' button");
+        Assert.assertTrue(moreOtherOptions.helpButtonIsDisplayed(), "'Help' button not displayed");
+
+        log.info("Validate 'Privacy & Legal' button");
+        Assert.assertTrue(moreOtherOptions.privacyLegalButtonIsDisplayed(), "'Privacy & Legal' button not displayed");
 
         log.info("Start Navigation to Privacy & Legal Screen");
         PrivacyLegalScreen privacyLegalScreen = moreOtherOptions.goToPrivacyLegalScreen();
 
-        log.info("Validate Privacy & Legal option list");
-        Assert.assertTrue(privacyLegalScreen.listOfLegalOptionsIsDisplayed(), "Privacy & Legal option list not displayed");
+        log.info("Validate 'Privacy & Legal' option list");
+        Assert.assertTrue(privacyLegalScreen.listOfLegalOptionsIsDisplayed(), "'Privacy & Legal' option list not displayed");
 
-        log.info("Validate Privacy Policy option");
-        Assert.assertTrue(privacyLegalScreen.privacyPolicyOptionIsDisplayed(), "Privacy Policy option not displayed");
+        log.info("Validate 'Privacy Policy' option");
+        Assert.assertTrue(privacyLegalScreen.privacyPolicyOptionIsDisplayed(), "'Privacy Policy' option not displayed");
 
-        log.info("Validate Terms of Use option");
-        Assert.assertTrue(privacyLegalScreen.termsOfUseOptionIsDisplayed(), "Terms of Use option not displayed");
+        log.info("Validate 'Terms of Use' option");
+        Assert.assertTrue(privacyLegalScreen.termsOfUseOptionIsDisplayed(), "'Terms of Use' option not displayed");
 
-        log.info("Validate Supplemental Terms and Conditions option");
-        Assert.assertTrue(privacyLegalScreen.supplementalTermsAndConditionsOptionIsDisplayed(), "Supplemental Terms and Conditions option not displayed");
+        log.info("Validate 'Supplemental Terms and Conditions' option");
+        Assert.assertTrue(privacyLegalScreen.supplementalTermsAndConditionsOptionIsDisplayed(), "'Supplemental Terms and Conditions' option not displayed");
 
-        log.info("Validate Legal Notices option");
-        Assert.assertTrue(privacyLegalScreen.legalNoticesOptionIsDisplayed(), "Legal Notices option not displayed");
+        log.info("Validate 'Legal Notices' option");
+        Assert.assertTrue(privacyLegalScreen.legalNoticesOptionIsDisplayed(), "'Legal Notices' option not displayed");
 
-        log.info("Validate Property Rules option");
-        Assert.assertTrue(privacyLegalScreen.propertyRulesOptionIsDisplayed(), "Property Rules option not displayed");
+        log.info("Validate 'Property Rules' option");
+        Assert.assertTrue(privacyLegalScreen.propertyRulesOptionIsDisplayed(), "'Property Rules' option not displayed");
 
-        log.info("Validate Electronic Communications Disclosure option");
-        Assert.assertTrue(privacyLegalScreen.electronicCommunicationsDisclosureOptionIsDisplayed(), "Electronic Communications Disclosure option not displayed");
+        log.info("Validate 'Electronic Communications Disclosure' option");
+        Assert.assertTrue(privacyLegalScreen.electronicCommunicationsDisclosureOptionIsDisplayed(), "'Electronic Communications Disclosure' option not displayed");
 
-        log.info("Validate Your California Privacy Rights option");
-        Assert.assertTrue(privacyLegalScreen.yourCaliforniaPrivacyRightsOptionIsDisplayed(), "Your California Privacy Rights option not displayed");
+        log.info("Validate 'Your California Privacy Rights' option");
+        Assert.assertTrue(privacyLegalScreen.yourCaliforniaPrivacyRightsOptionIsDisplayed(), "'Your California Privacy Rights' option not displayed");
 
-        log.info("Validate Do Not Sell My Personal Information option");
-        Assert.assertTrue(privacyLegalScreen.doNotSellMyPersonalInformationOptionIsDisplayed(), "Do Not Sell My Personal Information option not displayed");
+        log.info("Validate 'Do Not Sell My Personal Information' option");
+        Assert.assertTrue(privacyLegalScreen.doNotSellMyPersonalInformationOptionIsDisplayed(), "'Do Not Sell My Personal Information' option not displayed");
 
-        log.info("Validate In-App Maps Subject to Google Terms and Conditions option");
-        Assert.assertTrue(privacyLegalScreen.googleTermsAndConditionsIsDisplayed(), "In-App Maps Subject to Google Terms and Conditions option not displayed");
+        log.info("Validate 'In-App Maps Subject to Google Terms and Conditions' option");
+        Assert.assertTrue(privacyLegalScreen.googleTermsAndConditionsIsDisplayed(), "'In-App Maps Subject to Google Terms and Conditions' option not displayed");
 
-        log.info("Validate In-App Maps Subject to Google Privacy Policy option");
-        Assert.assertTrue(privacyLegalScreen.googlePrivacyPolicyIsDisplayed(), "In-App Maps Subject to Google Privacy Policy option not displayed");
+        log.info("Validate 'In-App Maps Subject to Google Privacy Policy' option");
+        Assert.assertTrue(privacyLegalScreen.googlePrivacyPolicyIsDisplayed(), "'In-App Maps Subject to Google Privacy Policy' option not displayed");
     }
 }
