@@ -6,6 +6,7 @@
       <class name="tests.NavigationTest"/>
       <class name="tests.CategoryListTest"/>
       <class name="tests.PrivacyLegalTest"/>
-    </classes>
+      <class name="tests.AddPlansOptionTest"/>
+      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
