@@ -57,8 +57,7 @@ public class DashBoardScreen extends BaseScreen {
      * return true if Show More Options Button element is displayed on screen, otherwise false.
      */
     public boolean moreOptionsButtonIsDisplayed() {
-        return isElementAvailable(moreOptionsButton);
-    }
+        return isElementAvailable(moreOptionsButton); }
 
     /**
      * @author Juan.Gonzalez
@@ -74,6 +73,13 @@ public class DashBoardScreen extends BaseScreen {
         click(moreOptionsButton);
         return new MoreOptionsScreen(driver);
     }
+
+    /**
+     * @author Juan.Gonzalez
+     * return true if Buy Tickets Reserve Dining Button element is displayed on screen, otherwise false.
+     */
+    public boolean buyTicketsReserveDiningButtonIsDisplayed() {
+        return isElementAvailable(buyTicketsReserveDiningButton); }
 
     /**
      * @author Juan.Gonzalez

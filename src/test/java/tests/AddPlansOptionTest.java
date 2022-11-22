@@ -18,10 +18,16 @@ public class AddPlansOptionTest extends BaseMobileTest {
         log.info("Start Navigation to Dashboard Screen");
         DashBoardScreen dashBoard = loadDashBoardScreen();
 
-        log.info("Start Navigation to Buy Tickets Reserve Dining Screen");
+        log.info("Validate 'Buy Tickets Reserve Dining' button");
+        Assert.assertTrue(dashBoard.buyTicketsReserveDiningButtonIsDisplayed(), "Check 'Buy Tickets Reserve Dining' button not displayed");
+
+        log.info("Start Navigation to 'Buy Tickets Reserve Dining' Screen");
         BuyTicketsReserveDiningScreen buyTicketsReserveDiningScreen = dashBoard.goToBuyTicketsReserveDiningScreen();
 
-        log.info("Validate Check Dining Availability button");
-        Assert.assertTrue(buyTicketsReserveDiningScreen.checkDiningAvailabilityIsDisplayed(), "Check Dining Availability button not displayed");
+        log.info("Validate 'Buy Tickets Reserve Dining' list");
+        Assert.assertTrue(buyTicketsReserveDiningScreen.buyTicketsReserveDiningListIsDisplayed(), "Check 'Buy Tickets Reserve Dining' list not displayed");
+
+        log.info("Validate 'Check Dining Availability' button");
+        Assert.assertTrue(buyTicketsReserveDiningScreen.checkDiningAvailabilityButtonIsDisplayed(), "Check 'Dining Availability' button not displayed");
     }
 }

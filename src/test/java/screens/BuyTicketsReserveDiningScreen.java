@@ -17,16 +17,28 @@ public class BuyTicketsReserveDiningScreen extends BaseScreen {
         super(driver);
     }
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/actionSheetListView\")")
+    private AndroidElement buyTicketsReserveDiningList;
+
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Check Dining Availability, 1 of 7, button\")")
-    private AndroidElement checkDiningAvailability;
+    private AndroidElement checkDiningAvailabilityButton;
+
+    /**
+     * @author Juan.Gonzalez
+     * return true if 'Buy Tickets Reserve Dining' List is displayed on screen, otherwise false.
+     */
+    public boolean buyTicketsReserveDiningListIsDisplayed() {
+        return isElementAvailable(buyTicketsReserveDiningList);
+    }
 
     /**
      * @author Juan.Gonzalez
      * return true if 'Check Dining Availability' Button is displayed on screen, otherwise false.
      */
-    public boolean checkDiningAvailabilityIsDisplayed() {
-        return isElementAvailable(checkDiningAvailability);
+    public boolean checkDiningAvailabilityButtonIsDisplayed() {
+        return isElementAvailable(checkDiningAvailabilityButton);
     }
+
 
 
 }
