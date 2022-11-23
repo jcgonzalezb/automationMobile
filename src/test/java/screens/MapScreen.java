@@ -106,5 +106,4 @@ public class MapScreen extends BaseScreen {
     public boolean hotelsCategoryButtonIsDisplayed() {
         return isElementAvailable(hotelsCategoryButton);
     }
-
 }

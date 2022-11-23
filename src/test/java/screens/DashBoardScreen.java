@@ -95,5 +95,4 @@ public class DashBoardScreen extends BaseScreen {
         click(buyTicketsReserveDiningButton);
         return new BuyTicketsReserveDiningScreen(driver);
     }
-
 }

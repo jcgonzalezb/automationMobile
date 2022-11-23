@@ -38,7 +38,4 @@ public class BuyTicketsReserveDiningScreen extends BaseScreen {
     public boolean checkDiningAvailabilityButtonIsDisplayed() {
         return isElementAvailable(checkDiningAvailabilityButton);
     }
-
-
-
 }

@@ -76,5 +76,4 @@ public abstract class BaseMobileTest {
         tutorialScreen.startPermissionsProcess();
         return tutorialScreen.shareLocationPermissions();
     }
-
 }
